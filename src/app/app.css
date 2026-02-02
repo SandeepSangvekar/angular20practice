@@ -1,0 +1,27 @@
+h1{
+    background-color: blue;
+}
+.one{
+    background-color: orange;
+}
+.two{
+    background-color: skyblue;
+}
+.three{
+    font-size: 22px;
+    font-style: italic;
+}
+.four{
+    color: red;
+    font-weight: bold;
+}
+.colorClass{
+    background-color: blue;
+    color: white;
+}
+.boldClass{
+    font-weight: 800;
+}
+.italicClass{
+    font-style: italic;
+}

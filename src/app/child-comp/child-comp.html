@@ -1,0 +1,8 @@
+<div style="text-align: center;">
+    <h1>Child component</h1>
+    <!-- Data from Parent component: <b>{{pData}}</b>  -->
+
+    Child component: <input type="text" #cComponent (keyup)="sendData(cComponent.value)">
+</div>
+
+<app-child-of-child></app-child-of-child>
