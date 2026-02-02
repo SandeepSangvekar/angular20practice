@@ -306,6 +306,28 @@
     <p>2.5 => 25*10/100</p>
     <p>{{2.5 | percent}}</p>
     <p>{{2.5 | percent: '3.2-5'}}</p>
+    
+    <h2>46. Currency Pipes in Angular 20</h2>
+    <h3>Syntax:</h3>
+    <p>number_expression | currency[:currencyCode[:symbolDisplay[:digitInfo]]]</p>
+    <p>Showing by default using currency pipe e.g.:  <b>{{curr | currency}}</b></p>
+    <p>to show rupee currency using parameter as INR: <b>{{curr | currency : 'INR'}}</b></p>
+    <p>USD: <b>{{curr | currency : 'USD'}}</b></p>
+    <p>GBP: <b>{{curr | currency : 'GBP'}}</b></p>
+    <p>INR: <b>{{curr | currency : 'INR' : true : '2.3-5'}}</b></p>
+    <p>INR: <b>{{curr | currency : 'INR' : false : '2.3-5'}}</b></p>
+
+    <h2>47. Date Pipes in Angular 20</h2>
+    <p>{{currentDate}}</p>
+    <p>using shortDate parameter: <b>{{currentDate | date : 'shortDate'}}</b></p>
+    <p>using longDate parameter:  <b>{{currentDate | date : 'longDate'}}</b></p>
+    <p>using fullDate parameter:  <b>{{currentDate | date : 'fullDate'}}</b></p>
+    <p>using dd-MM-yyyy parameter <b>{{currentDate | date : 'dd-MM-yyyy'}}</b></p>
+    <p>using dd-MMM-yyyy parameter <b>{{currentDate | date : 'dd-MMM-yyyy'}}</b></p>
+    <p>using dd/MMM/yyyy parameter <b>{{currentDate | date : 'dd/MMM/yyyy'}}</b></p>
+
+    <h2>48. Parameterize & chaining Pipes in Angular 20</h2>
+    <p></p>
 </div>
 <!-- <app-child-comp [pData]="pcomponent.value"></app-child-comp> -->
 <app-child-comp (childEvent)="getData($event)"></app-child-comp>

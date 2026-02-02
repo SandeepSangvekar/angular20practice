@@ -69,6 +69,8 @@ export class App {
   titleTxt= "This is a Title"
   jsonData = {name:'Ajinkya Manurkar', role: 'UI/UX designer', gender: 'Male'}
   num = '12.677972';
+  curr = 12.20;
+  currentDate = new Date();
   getData(val:string){
     this.cData = Number(val);
     console.log(this.cData);
