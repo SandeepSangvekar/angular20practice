@@ -2,13 +2,15 @@ import { Component, HostListener, signal, ViewEncapsulation } from '@angular/cor
 import { RouterOutlet } from '@angular/router';
 import { Employee } from './employee/employee';
 import { ChildComp } from './child-comp/child-comp';
-import { CommonModule } from '@angular/common';
+import { CommonModule, LowerCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { WelcomePipe } from './welcome-pipe';
+import { LimitwordPipe } from './limitword-pipe';
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
-  imports: [Employee, ChildComp, CommonModule, FormsModule], 
+  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe], 
   templateUrl: './app.html',
   // template: '<h1>Hello, Sandeep....!</h1>',
   styleUrl: './app.css', // to use external css
@@ -33,7 +35,7 @@ export class App {
   cData:any;
   isValid: boolean = true;
   age = 0;
-  name: string = 'rohit';
+  name: string = 'rohit gaikwad';
   employees:any = [
     {id:1, name: 'Atharva Harmalkar', country: 'India'},
     {id:2, name: 'Sarvesh Harmalkar', country: 'USA'},
@@ -71,6 +73,8 @@ export class App {
   num = '12.677972';
   curr = 12.20;
   currentDate = new Date();
+  strValue ="Angular is a TypeScript-based, open-source front-end framework maintained by Google for building dynamic, high-performance, and scalable single-page web applications (SPAs). It utilizes a component-based architecture, TypeScript for code structure, and features like two-way data binding and Dependency Injection to simplify development for enterprise-level applications.";
+  strValue2 = "Hello this is an dummy text"
   getData(val:string){
     this.cData = Number(val);
     console.log(this.cData);
