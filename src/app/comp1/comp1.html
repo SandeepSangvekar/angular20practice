@@ -1,0 +1,12 @@
+<h2 [style]="{'background-color':'red'}">Component 1</h2>
+<h3>Enter your Number:</h3>
+<input type="text" #txtNum>
+<button (click)="onAddNum(txtNum.value)">Add Number</button>
+<!-- <p>{{list}}</p> -->
+<ul [style]="{'list-style': 'none', 'padding-left': '0', }">
+@for(a of list; track a){
+    
+        <li [style]="{'border': '1px solid', 'border-bottom': '0' }">{{a}}</li>
+    
+}
+</ul>

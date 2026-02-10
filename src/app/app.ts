@@ -1,23 +1,29 @@
 import { Component, HostListener, signal, ViewEncapsulation } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Employee } from './employee/employee';
 import { ChildComp } from './child-comp/child-comp';
 import { CommonModule, LowerCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WelcomePipe } from './welcome-pipe';
 import { LimitwordPipe } from './limitword-pipe';
+import { Message } from './services/message';
+import { Othermessage } from './services/othermessage';
+import { Comp1 } from './comp1/comp1';
+import { Comp2 } from './comp2/comp2';
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
-  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe], 
+  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe, Comp1, Comp2, RouterLink, RouterOutlet], 
   templateUrl: './app.html',
   // template: '<h1>Hello, Sandeep....!</h1>',
   styleUrl: './app.css', // to use external css
   // styles:'h1{background-color:yellow}', // use inline css
   // styleUrls: ['./app.css', './tests.css'], // use multiple external css
   preserveWhitespaces: true,
-  encapsulation:ViewEncapsulation.ShadowDom
+  encapsulation:ViewEncapsulation.ShadowDom,
+  // providers: [Message, Othermessage]
+  providers: [Othermessage]
 })
 export class App {
   protected readonly title = signal('angular20practice');
@@ -75,6 +81,10 @@ export class App {
   currentDate = new Date();
   strValue ="Angular is a TypeScript-based, open-source front-end framework maintained by Google for building dynamic, high-performance, and scalable single-page web applications (SPAs). It utilizes a component-based architecture, TypeScript for code structure, and features like two-way data binding and Dependency Injection to simplify development for enterprise-level applications.";
   strValue2 = "Hello this is an dummy text"
+  msg4:string= '';
+  constructor(private msgService: Message){
+
+  }
   getData(val:string){
     this.cData = Number(val);
     console.log(this.cData);
@@ -153,5 +163,8 @@ export class App {
   }
   sendMsg2(val: any){
     this.msg3 = val;
+  }
+  onGetMsg(){
+    this.msg4 = this.msgService.getMsg();
   }
 }

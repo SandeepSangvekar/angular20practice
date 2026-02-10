@@ -334,17 +334,36 @@
     <p>{{currentDate | date : 'longDate' | uppercase}}</p>
     <p>Overwrite pipe with last one: {{name | lowercase | uppercase}}</p>
     
-    <h3>49. Custom Pipes in Angular 20</h3>
+    <h2>49. Custom Pipes in Angular 20</h2>
     <p>{{name | abc}}</p>
     <p>{{"Rahul sharma" | abc}}</p>
 
-    <h3>50. Limit Word Custom Pipes in Angular 20</h3>
+    <h2>50. Limit Word Custom Pipes in Angular 20</h2>
     <p>{{name | abc | lowercase}}</p>
     <p>{{name | uppercase | abc}}</p>
     <p>{{strValue2 | limitword}}</p>
     <p>{{strValue | limitword : 7}}</p>
     <h3>added third parameter as * like:</h3>
     <p>{{strValue2 | limitword : 4 : '****'}}</p>
+
+    <h2>51. Service in Angular 20 </h2>
+    <button (click)="onGetMsg()">Get message form service</button>
+    <p>Message: <b>{{msg4}}</b></p>
+    
+    <h2>54. Singleton Service in Angular 20</h2>
+
+    <h2>58. Route Configuration in Angular 20</h2>
+    <div>
+        <a routerLink="home">Dashboard |</a>
+        <a routerLink="aboutus">Aboutus |</a>
+        <a routerLink="contactus">Contact us</a>
+    </div>
+    <div [ngStyle]="{'border': '1px solid red'}">
+        <router-outlet></router-outlet>
+    </div>
+    <app-comp1></app-comp1>
+    <app-comp2></app-comp2>
+    
 
 </div>
 <!-- <app-child-comp [pData]="pcomponent.value"></app-child-comp> -->
