@@ -352,15 +352,39 @@
     
     <h2>54. Singleton Service in Angular 20</h2>
 
-    <h2>58. Route Configuration in Angular 20</h2>
+    <h2>58, 59, 60, 61, 62, 64, 65 Route Configuration, Set page title, Wildcard route, Named and Multiple Router-Outlets set base URL in Angular 20</h2>
     <div>
-        <a routerLink="home">Dashboard |</a>
-        <a routerLink="aboutus">Aboutus |</a>
-        <a routerLink="contactus">Contact us</a>
+        <!-- using multiple active classes -->
+        <a routerLink="login" routerLinkActive="active home">Login</a> |
+        <!-- using store in variable with peroperty binding -->
+        <a routerLink="home" [routerLinkActive]="classToApply">Dashboard</a> |
+        <a routerLink="aboutus" [routerLinkActive]="getCss()">About us</a> |
+        <a routerLink="contactus" routerLinkActive="active home">Contact us</a> |
+        <a routerLink="student" routerLinkActive="active home">Student</a> |
+        <a [routerLink]="[{outlets: {outlet2: ['aboutusnew']}}]">About us new</a> |
+        <a [routerLink]="[{outlets: {outlet2: ['aboutusnew', 101]}}]">About us new 2</a>
+        <!-- send as a parameter -->
     </div>
-    <div [ngStyle]="{'border': '1px solid red'}">
-        <router-outlet></router-outlet>
+
+    <h2>64. Auth Guards using login page in Angular 20</h2>
+    <!-- <app-login></app-login> -->
+    <div [ngStyle]="{'border': '1px dashed black'}">
+        <div [ngStyle]="{'background-color': 'yellow'}">
+            <router-outlet></router-outlet> 
+            <!-- primary outlet -->
+        </div>
+        <div [ngStyle]="{'background-color': 'green'}">
+            <router-outlet name="outlet2"></router-outlet>
+        </div>
     </div>
+    <h4>66. Session storage in angular 20</h4>
+    <app-comp3></app-comp3>
+    <app-comp4></app-comp4>
+
+    <h4>Cookies in angular 20</h4>
+    <app-comp5></app-comp5>
+    <app-comp6></app-comp6>
+
     <app-comp1></app-comp1>
     <app-comp2></app-comp2>
     

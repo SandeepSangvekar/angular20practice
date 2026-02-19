@@ -1,0 +1,19 @@
+<h2>Login</h2>
+<div style="display: flex;justify-content: center;align-items: center;">
+    <table border="1" >
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" #username></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" #userpassword></td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)="login(username.value, userpassword.value)">Login</button>
+            </td>
+            <td><button>Cancel</button></td>
+        </tr>
+    </table>
+</div>

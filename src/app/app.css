@@ -25,3 +25,15 @@ h1{
 .italicClass{
     font-style: italic;
 }
+.active{
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+}
+.home{
+    font-weight: bold;
+}
+div a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,5 +1,5 @@
 import { Component, HostListener, signal, ViewEncapsulation } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Employee } from './employee/employee';
 import { ChildComp } from './child-comp/child-comp';
 import { CommonModule, LowerCasePipe } from '@angular/common';
@@ -10,11 +10,16 @@ import { Message } from './services/message';
 import { Othermessage } from './services/othermessage';
 import { Comp1 } from './comp1/comp1';
 import { Comp2 } from './comp2/comp2';
+import { Comp4 } from './comp4/comp4';
+import { Comp3 } from './comp3/comp3';
+import { CookieService } from 'ngx-cookie-service';
+import { Comp5 } from './comp5/comp5';
+import { Comp6 } from './comp6/comp6';
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
-  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe, Comp1, Comp2, RouterLink, RouterOutlet], 
+  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe, Comp1, Comp2, RouterLink, RouterOutlet, RouterLinkActive, Comp3, Comp4, Comp5, Comp6], 
   templateUrl: './app.html',
   // template: '<h1>Hello, Sandeep....!</h1>',
   styleUrl: './app.css', // to use external css
@@ -82,8 +87,18 @@ export class App {
   strValue ="Angular is a TypeScript-based, open-source front-end framework maintained by Google for building dynamic, high-performance, and scalable single-page web applications (SPAs). It utilizes a component-based architecture, TypeScript for code structure, and features like two-way data binding and Dependency Injection to simplify development for enterprise-level applications.";
   strValue2 = "Hello this is an dummy text"
   msg4:string= '';
-  constructor(private msgService: Message){
-
+  classToApply = 'active home'
+  constructor(private msgService: Message, private cookie_: CookieService){
+    // if(window.localStorage){
+    //   alert('Supported!');
+    // }
+    localStorage.setItem('userID', 'sandeep123');
+    sessionStorage.setItem('employeeID', 'emp001');
+    cookie_.set('cookieID', 'cookie001');
+    
+  }
+  getCss(){
+    return 'active home'
   }
   getData(val:string){
     this.cData = Number(val);
