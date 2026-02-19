@@ -15,11 +15,12 @@ import { Comp3 } from './comp3/comp3';
 import { CookieService } from 'ngx-cookie-service';
 import { Comp5 } from './comp5/comp5';
 import { Comp6 } from './comp6/comp6';
+import { ReactiveForm } from './reactive-form/reactive-form';
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
-  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe, Comp1, Comp2, RouterLink, RouterOutlet, RouterLinkActive, Comp3, Comp4, Comp5, Comp6], 
+  imports: [Employee, ChildComp, CommonModule, FormsModule, WelcomePipe, LowerCasePipe, LimitwordPipe, Comp1, Comp2, RouterLink, RouterOutlet, RouterLinkActive, Comp3, Comp4, Comp5, Comp6, ReactiveForm], 
   templateUrl: './app.html',
   // template: '<h1>Hello, Sandeep....!</h1>',
   styleUrl: './app.css', // to use external css

@@ -1,0 +1,35 @@
+<h3>Registration Form</h3>
+<div>
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm)">
+        <div>
+            <label for="">First Name</label>
+            <input type="text" placeholder="First Name" formControlName="fName">
+            <small *ngIf="regForm.controls['fName'].touched && regForm.controls['fName'].invalid">
+                <span *ngIf="regForm.controls['fName'].hasError('required')">First Name is required.</span>
+                <span *ngIf="regForm.controls['fName'].hasError('minlength')">First Name should be 5 char.</span>
+                <span *ngIf="regForm.controls['fName'].hasError('maxlength')">First Name should be less than 7 char.</span>
+            </small>
+        </div>
+        <div>
+            <label for="">Last Name</label>
+            <input type="text" placeholder="Last Name" formControlName="lName">
+            <small *ngIf="regForm.controls['lName'].touched && !regForm.controls['lName'].valid">Last Name is required.</small>
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" placeholder="Email" formControlName="email">
+            <small *ngIf="regForm.controls['email'].touched && !regForm.controls['email'].valid">
+                <span *ngIf="regForm.controls['email'].hasError('required')">Email is required.</span>
+                <span *ngIf="regForm.controls['email'].hasError('email')">Email should be correct.</span>
+            </small>
+        </div>
+        <div>
+            <label for="">Contact No</label>
+            <input type="text" placeholder="Contact No" formControlName="contactNo">
+            <small *ngIf="regForm.controls['contactNo'].touched && !regForm.controls['contactNo'].valid">Contact No is required.</small>
+        </div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
