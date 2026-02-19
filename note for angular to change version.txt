@@ -1,0 +1,233 @@
+01-02-2024 note:
+to check angular version: ng v
+Previous version:
+Angular CLI: 11.0.7
+Node: 14.18.0
+
+Latest version:
+node v18.10.0
+angular 16.2.10
+
+npm audit fix
+npm audit fix --force
+
+npm uninstall -g @angular/cli   # Remove current Angular CLI (if installed globally)
+npm install -g @angular/cli@11.0.7   # Install Angular CLI version 11.0.7 globally
+
+ng update @angular/cli@16 @angular/core@16 @angular/cdk@16
+npm install -g @angular/cli@16.2.10
+npm cache clean --force
+
+	
+
+**node switch using nvm
+download nvm-setup.exe and install it then use beow the commands:
+nvm list
+nvm use 18.17.0
+npm install -g @angular/cli@16.2.10
+
+upgrading step by step version like 10 to 11
+10 to 11
+nvm use 14.21.3
+ng update @angular/cli@11 @angular/core@11
+rm -rf node_modules package-lock.json
+npm cache clean --force
+npm install --legacy-peer-deps
+
+"dependencies": {
+  "@angular/animations": "11.2.14",
+  "@angular/common": "11.2.14",
+  "@angular/compiler": "11.2.14",
+  "@angular/core": "11.2.14",
+  "@angular/forms": "11.2.14",
+  "@angular/platform-browser": "11.2.14",
+  "@angular/platform-browser-dynamic": "11.2.14",
+  "@angular/router": "11.2.14",
+  "rxjs": "6.6.7",
+  "tslib": "^2.0.0",
+  "zone.js": "~0.11.4"
+}
+"devDependencies": {
+  "@angular-devkit/build-angular": "0.1102.14",
+  "@angular/cli": "11.2.14",
+  "@angular/compiler-cli": "11.2.14",
+  "@types/node": "^12.20.0",
+  "typescript": "4.1.5"
+}
+
+npm uninstall @agm/core
+npm install @agm/core@1.1.0 --legacy-peer-deps
+
+Next Upgrade Step: Angular 11 ➜ Angular 12
+nvm use 14.21.3
+
+
+git checkout -b "migrations-12"
+
+
+Step 1: 
+install on cmd: nvm install 14.21.3
+npm uninstall -g @angular/cli
+npm install -g @angular/cli@12
+
+Step 2: Upgrade Angular CLI + Core Locally (the important part)
+In your project folder, do:
+cd E:\sandeep\All-project\ajax-upgrade16
+
+Then run:
+ng update @angular/cli@12 @angular/core@12 --force
+
+If you get warnings or partial upgrades, also run:
+npm install --legacy-peer-deps
+ng serve
+
+*upgraded 12 to 13
+ng update @angular/cli@13 @angular/core@13 --force
+
+1. Remove-Item -Recurse -Force node_modules, package-lock.json
+2. 	
+npm cache verify
+3. Set versions in package.json
+Open your package.json and update all @angular/* packages to 13.3.11.
+
+Here’s a minimal safe Angular 13 block to copy-paste:
+"dependencies": {
+  "@angular/animations": "13.3.11",
+  "@angular/common": "13.3.11",
+  "@angular/compiler": "13.3.11",
+  "@angular/core": "13.3.11",
+  "@angular/forms": "13.3.11",
+  "@angular/platform-browser": "13.3.11",
+  "@angular/platform-browser-dynamic": "13.3.11",
+  "@angular/router": "13.3.11",
+  "rxjs": "^6.6.7",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.11.4"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "13.3.11",
+  "@angular/cli": "13.3.11",
+  "@angular/compiler-cli": "13.3.11",
+  "@types/node": "^12.20.36",
+  "typescript": "~4.6.4"
+}
+
+4. npm install
+5. ng v
+6. ng s
+
+
+git push to test branch angular 13 code and removing cache files:
+Step 1: Ensure .angular/cache/ is in .gitignore
+Open .gitignore file and make sure it has:
+
+plaintext
+Copy
+Edit
+node_modules/
+.angular/cache/
+
+Step 2: Unstage .angular/cache/ files from current commit
+git restore --staged .angular/cache/
+
+git reset HEAD .angular/cache/*
+
+* upgrading 13 to 14
+1. Clean before upgrading
+ In PowerShell or Terminal (inside your project folder):
+ Remove-Item -Recurse -Force node_modules, package-lock.json
+	
+
+npm install @angular/cli@14.2.12 @angular/core@14.2.12 @angular/common@14.2.12 @angular/compiler@14.2.12 @angular/forms@14.2.12 @angular/platform-browser@14.2.12 @angular/platform-browser-dynamic@14.2.12 @angular/router@14.2.12 @angular/compiler-cli@14.2.12 @angular/animations@14.2.12 @angular-devkit/build-angular@14.2.12 --legacy-peer-deps
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
+
+npm install typescript@~4.8.4 --save-dev --legacy-peer-deps
+npm install --legacy-peer-deps
+
+comment this stringify line from this pages
+import { stringify } from "@angular/compiler/src/util";
+details.component.ts
+
+cust-dashboard.component.ts
+
+home.component.ts
+
+notifications.component.ts
+
+track.component.ts
+
+update-eng-hour.component.ts
+
+ng s
+
+* upgrading 14 to 15
+git checkout -b "migrations-15"
+you do NOT need to change Node.js version — your 14.21.3 is perfectly fine for Angular 15.
+git stash
+ng update @angular/core@15 @angular/cli@15 --force
+
+npm install @angular/cdk@15 --force
+
+git stash
+ng update @angular/core@15 @angular/cli@15 --force
+
+npm uninstall @agm/core -- not compatible for 15
+
+ *CURRENT STATUS
+Your key Angular dependencies:
+
+Angular: 15.2.10
+
+Angular CLI: 15.2.11
+
+TypeScript: 4.9.5 → ✅ Supported
+
+RxJS: 6.6.7 → ❌ Old (Angular 15 supports RxJS 7)
+
+@angular/cdk: 15.2.9 → ✅ Correct
+
+@agm/core: ^1.1.0 → ❌ Deprecated
+
+@types/googlemaps: ^3.39.13 → ❌ Deprecated
+
+	Need help replacing @agm/core with official @angular/google-maps
+
+correct command for poershell to remove node_modules and package-lock.json:
+Remove-Item -Recurse -Force node_modules, package-lock.json
+
+
+⚠️ 3. Version Conflicts (Minor)
+"@angular/google-maps": "^10.0.0" is mismatched.
+
+***The correct version for Angular 15 is: ^15.x.x
+You can fix it with:
+bash
+npm install @angular/google-maps@^15
+"@types/node": "^12.20.36" → you can upgrade this:
+bash
+npm install @types/node@18 --save-dev
+
+replace this old package:
+import { AgmCoreModule } from '@agm/core';
+with:
+import { AgmCoreModule } from '	';
+
+npm install --legacy-peer-deps
+
+ngx-bootstrap-modal is not compatible for angular 15
+old dependencies is "ngx-bootstrap-modal": "^2.0.1",
+removed dependencies is:"ngx-bootstrap-modal": "^2.0.1",
+
+Update this section in "devDependencies":
+// remove
+"codelyzer": "^6.0.0-next.1",
+"tslint": "^6.1.0",
+
+
+
+
+
+
+
+

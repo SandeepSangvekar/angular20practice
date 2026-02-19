@@ -1,0 +1,42 @@
+Correct Steps to create new react project:
+1. Create a Vite React project:
+ - npm create vite@latest
+ - Enter the project name when prompted.
+ - Select React as the framework.
+ - Choose either JavaScript or TypeScript as the variant.
+
+2. Navigate to the project directory:
+ - cd your-project-name
+ - Install dependencies:
+   npm install
+3. Run the development server:
+ - npm run dev
+
+4. install bootstap
+ -npm install bootstrap
+
+
+5. Folder Structure:
+
+vite-project/
+│── 📂 src/
+│   │── 📂 assets/            # Images, fonts, and other static assets
+│   │── 📂 components/        # Reusable UI components (Header, Footer, etc.)
+│   │   │── Header.jsx
+│   │   │── Footer.jsx
+│   │── 📂 sections/          # Page sections (Home, Services, Works, Blog)
+│   │   │── Home.jsx
+│   │   │── Services.jsx
+│   │   │── Works.jsx
+│   │   │── Blog.jsx
+│   │── 📂 styles/            # Global and component-specific styles
+│   │   │── index.css
+│   │── App.jsx               # Main component where all sections are rendered
+│   │── main.jsx              # React entry point
+│── 📂 public/                # Static assets (favicons, SEO images)
+│── package.json              # npm dependencies
+│── index.html                # Main HTML file
+
+6. Create the necessary folders
+Run these commands inside your project folder:
+ - mkdir src/assets src/components src/sections src/styles

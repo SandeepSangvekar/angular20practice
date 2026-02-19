@@ -1,0 +1,485 @@
+angular que of angular 19 by code step by step
+*Angular Intro?
+ - We need to install Node for angular
+ - MVC architecture
+ - Angular js and angular are different
+ - angular release on 14-Sept-2016
+ - Current version is 19
+
+*Why Angular?
+ - Fast loading.
+ - Fast development
+ - Angular provide alot of features : 
+   validation library,  routing, component bases structure
+ - large community
+
+*What is angular CLI?
+ - Angular CLI (Command Line Interface) is a tool that helps developers create, build, test, and deploy angular applications.
+ - Commands that help you to develop angular application.
+
+
+
+*Angular 20 Introduction:
+ - Angular 20 has been released on 29 May 2025
+ - Developed by: Google.
+ - Front end/ Client Side Framework.
+ - In this version, special emphasis has been placed on performance, developer experience and modernization.
+
+*What is angular?
+ - The Angular is the newest form of the AngularJS, developed by Google, which is an open source front-end development platform used for building mobile and desktop
+   web applications. Angular is rewritten by the same team built that built AngularJS.
+ - It is a Javascript framework for building web applcations and apps in Javascript, HTML, and Typescript, which is a superset of Javascript. The angular now comes
+   with every latest feature you need to build a complex and sophisticated web or mobile application. It contains feature like component, Directives, Forms, Pipes, 
+   HTTP services, Dependency Injection and many more.
+ - Angular is one of the most popular frameworks for building client apps with HTML, CSS, and Typescript.  
+
+*Angular Versions:
+ - Angular versions: 1) major 2) minor 3) patch
+   For example, version 20.1.2 indicates major version 20, minor version 1 and patch version 2. The version number is incremented based on the level of change included 
+   in
+ - Major releases contain significant new features, some but minnimal developer assistance is expected during  the update. When updating to a new major release, you may need
+   to run update script, refactor code, run additional tests, and learn new APIs.
+ - Minor releases contain new smallest features. Minor releases are fully backward compatible; no developer assistence is expected during update, but you can optionally
+   modify your apps and libraries to begin using new APIs, features and capabilities that were added in the release. We update peer dependencies in minor versions by
+   expanding the supported versions, but we do not require projects to update these dependencies.
+ - Patch releases are low risk, bug fix releases, No developer assistance is expected during update.
+
+*Release frequency:
+ - A major release every 6 months
+ - 1-3 minor release for each major release
+ - A patch release almost every week
+
+*Support Policy:
+ - All of our major releases are supported for 18 months.
+ - 6 months of active support, during which regularly-scheduled updates and patches are released, as described.
+ - 12 months of long-term support(LTS). During the LTS period, only critical fixes and security patches will be released. 
+
+*Nodejs:
+ - Node.js is a server side platform built on Google chrome's javascript engine. Node.js was developed by Ryan Dahl in 2009.
+ - Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js application are written in javascript,
+   and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
+ - Node.js also provides a rich library of various Javascript modules with simplifies the development of web applictions using Node.js to a great extent.
+ - Node.js is an open source server environment
+ - Node.js is free
+ - Node.js runs on various platforms(Windows, Linux, Unix, Mac OS X, etc.
+ - Node.js = Runtime Environment + Javascript Library
+
+*Where to Use Node.js?
+Following are the areas where Node.js is proving  itself as a perfect technology partner.
+ - I/O bound Applications
+ - Data streaming Applications
+ - Data Inensive Real-Time Application(DIRT)
+ - JSON APIs based Applications
+ - Single page applications
+
+ 
+   
+
+*Angular 20 new features and updates details:
+1) Zoneless change detection:
+ - Earlier in angular, every time there was a change in the DOM, zone.js used to track where to update. Now in Angular 20, a "zoneless" method has been introduced, 
+   which means now you cando change detection even without zone.js
+ Benenfits:
+ - No more need for zone.js.
+ - Faster performance and lighter apps.
+ - Easier debugging and better micro frontend compatability.
+ - Currently in developer preview.
+
+2) Sectorless Components:
+ Earlier, to use a component, it had to be imported first into the module and then into the components, all this hassle is over:
+ Benefits:
+ - No need to import components in multiple places.
+ - cleaner and more module code.
+ - simplifies component creation and usage.
+
+3) Signal Based Forms:
+ Earlier there were two types of forms in Angular - Template-driven and Reactive forms, Now signal-based forms have been introduced in Angular 20, which is a new, easy
+ and scalable way.
+ Benefits:
+ - Unified and modern approach to handling forms.
+ - Type-safe and scalable stucture.
+ - Better integration with Angular's reactivity model.
+ - Backward-compatible with existing forms.
+
+4) Modern Testing Tools:
+ Angular 20 has deprecated the old Karma test runner and you can now use these new and faster test runners:
+ Benefits:
+ - Goodbye to Karma test runner.
+ - Welcome modern tools like: 
+   Jest, Vitest, Web Test Runner
+ - Faster, simpler, and more reliable testing.
+
+5) Enhanced SSR (Server-Side Rendering)
+ SSR means your Angular is first rendered on the server, then on the browser. SSR has been further improved in Angular 20:
+ Bnenfits:
+ - Faster and more flexible SSR.
+ - Route-specific rendering strategies.
+ - Better SEO and performance.
+
+6) Other Improvements
+ - Typed Forms support continues.
+ - ESBuild Integration -> Faster builds.
+ - NgOptimizedImage Directive for better image handling.
+ - New Control flow syntax (simplified *ngIf, *ngFor, etc.)
+
+
+
+7) What is booting process in angular 20?
+ - In Angular 20, the booting (bootstrapping) process means how an Angular application starts and loads the first component in the browser.
+
+🧠 One-Line Definition (Interview Ready)
+Bootstrapping in Angular 20 is the process where Angular initializes the framework and loads the root standalone component using bootstrapApplication() 
+to render the application.
+
+If you want, I can also explain:
+ - Bootstrapping with vs without routing
+ - Difference between Angular 15 vs Angular 20
+ - Bootstrapping lazy-loaded apps
+ - Bootstrapping flow with diagram for interviews
+
+ *Visual Flow Diagram
+index.html
+   ↓
+main.ts
+   ↓
+bootstrapApplication()
+   ↓
+app.config.ts (providers, routes)
+   ↓
+AppComponent
+   ↓
+Router / Components
+   ↓
+UI Rendered
+
+8) Main Building blocks of an angular appliction
+
+9)Common decorators:
+ - @NgModules() to define modules.
+ - @Component() to define components
+ - @Injectable() to define services
+ - @Input() and Output() to define properties. that send and receive data from the dom.
+ There are many built-in decorators available in Angular and many properties on each decorator	
+
+10)Types of Decorators
+ - Class decorators, e.g. @Component and @NgModule
+ - Property decorators for properties inside classes, e.g. @Input and @Output
+ - Method decorators for methods inside classes, e.g. @HostListner
+ - Parameter decorators for parameters inside class constructors, e.g. @Input
+ Each decorator has a unique role
+
+11)@Hostlistener decorator
+ - It is called method decorator
+ - When you use @hostlistener decorator It is calling below funtion only other below or above function of @hostlistener
+ - and it is use for method calling decorator
+
+12)Selector
+ For example, here are some ways you can specify the selector attribute and how to use it in HTML
+ - element-name: Select by element name.
+ - .class: Select by class name.
+ - [attribute]: Select by attribute name.
+
+13)Feature of standalone component
+
+14)Style, StyleURL & StyleUrls:
+ We can represent our styles, ie the CSS code within the @Component decorator in two ways.
+ Inline Styles:
+ - the inline style are specified directly in the component decorator. In this, you will find the CSS within the TypeScript file. This can be implemented using the
+  "styles" property.
+ External Styles:
+ - The External style define CSS in a separate file and refer to this file is styleUrl.means In this, we will find a separate CSS file instead of finding a CSS within
+  the TypeScript file. Here, the typescript file contains the path to that style sheet file with the help of the "styleUrls" property.
+
+15)preserveWhitespaces:
+ - preserveWhitespaces is used to tell Angular whether to keep or remove extra spaces and line breaks from component templates. 
+   It is helpful when exact formatting is required, such as in preformatted text or inline layouts.
+ - true → keeps spaces & new lines (useful when exact formatting matters)
+ - false → removes extra spaces (default, better performance)
+
+16)Encapsulation:
+ - To emulate the shadow DOM and encapsulate styles, angular provides three types of view encapsulation are the folowing.
+   Emulated(default): The main HTML styles are propagated to the component. The styles defined in the component's @Component decorator are limited to this component only.
+ - Native/shadow DOM: The main HTML styles are not propagated to the component. The styles defined in the component's @Component decorator are limited to this component only.
+ - None: The component styles are propagated to the main HTML and therefore are visible to all components of the page. with apps that have none and native components
+   in the application. All components with encapsulation none will have their duplicate styles on all components with native encapsulation.
+
+ *Emulated:
+ - No Shadow DOM
+ - Style encapsulation
+
+ *Native:
+ - Shadow DOM
+ - Style encapsulation
+
+ *None:
+ - No Shadow DOM
+ - No style encapsulation
+
+17)Directives:
+ - Basically, directives are used to extend the power of the HTML attributes and to change the appearance or behavior of a DOM element.
+ - Directive in Angular is a javascript class, which is declared as @directive. Angular has 3 types of directives, which are listed below:
+   component directives, structural directives and attributes directives.
+ *Component directive:
+ - If any component load in another component and change of DOM structure it is called component directive.
+ - A component directive in Angular 20 is a directive with a template that controls a part of the UI.
+ - It uses @Component, Has HTML + CSS + logic, Always has a selector and a template
+ *Structural directive:
+ - A structural directive in Angular 20 changes the DOM structure by adding or removing elements.
+ - type of two directive namely @If, @For and @Switch in angular 20
+ *Attribute directive:
+ - An attribute directive in Angular 20 changes the appearance or behavior of an existing element.
+ - Does not add or remove elements
+ - Works by changing styles, classes, or attributes
+ 👉 In short:
+ Attribute directive modifies how an element looks or behaves.
+
+*@switch: 
+ - Switch is an angular directive that displays one element from a possible set of elements based on some condition.
+ - and It is a case sensitive. 
+ - In old (angular 19) syntax If we create duplicate case so getting multiple data which has create as duplicate.
+ - but in new in angular 20 getting 1 record in duplicate data. It has resolved in angular 20.
+
+*@for:
+ - The @for block repeatedly renders content of a block for each item in a collection.
+ - Syntax:
+   @for(item of items; track item.name){
+    <li>{{item.name}}</li>
+   }@empty{
+    <li>There are no items.</li>
+   }
+ - Inside @for contents, several implicit variables are always available:
+ Variable Meaning:
+ $count - Number of items in a collection iterated over
+ $index - Index of the current row
+ $first - Whether the current row is the first row
+ $last - Whether the current row is the last row
+ $even - Whether the current row index is even
+ $odd - Whether the current row index is odd
+
+*ngStyle Directive:
+ - The NgStyle  directive allow you to set a given DOM elements style properties.
+ - One way to set styles is by using the NgStyle directive and assigning it an object, like so <div [ngStyle]="{'background-color':'green'}">Hello World</div>
+ - This sets the background color of the div to green. 
+
+*ngClass Directive:
+ - It controls the appearance of elements by adding and removing CSS classes dynamically.
+ - ngClass work with string, array and object
+
+*data binding
+
+*Attribute Binding:
+ -It is a one way data binding and Its process of component to view.
+ - Attribute Binding alway gives a old value. 
+ - We can use rowspan and colspan in table
+
+*Property Binding:
+ - Property Binding alway gives a currant value. (check diff between attribute binding and property binding.
+
+*CSS Class binding:
+ - Class binding in angular makes it very easy to set the class property of a view element. We can set or remove the CSS class names from an elements class attribute
+   with the help of class binding.
+
+*innerHTML:
+ - using innerHTML we can bind any html. we can write html code/ tags using innerHTML.
+ - Its will create in any tag and creates inner tag which we use like div or span 
+
+*Interpolation vs property binding:
+ - Interpolation get fails when we work with boolean value.
+
+*Short Summary
+| Binding Type             | Direction        |
+| ------------------------ | ---------------- |
+| Property / Interpolation | Component ➜ View |
+| Event                    | View ➜ Component |
+| Two-way (`ngModel`)      | Component ↔ View |
+
+👉 In one line:
+
+ - Component to View → Property binding
+ - View to Component → Event binding
+ - Both → Two-way binding
+
+*Event binding:
+ There are 2 type of syntax we can write in angular 20:
+
+| Syntax                | Called As                                           |
+| --------------------- | --------------------------------------------------- |
+| `on-click="click2()"` | **Inline HTML event handler / DOM event attribute** |
+| `(click)="click2()"`  | **Angular Event Binding**                           |
+
+*pipe:
+ - Angular pipes can be used to transform data to desired output.
+ - Pipe has 2 pipes which is Built-in pipes and custom pipes
+ - In Built-in pipes are pipes namely parameterized and chaining
+
+*Server-Side Rendering(SSR) :
+ - SSR (Server-Side Rendering) means rendering Angular applications on the server instead of only in the browser.
+ - The server generates the full HTML of the page and sends it the the client.
+ - The browser then displays content immediately and Angular takes over for interactivity.
+
+*Why do we need SSR?
+ - Faster First Load - The user will see a page quickly because the HTML is pre-rendered.
+ - SEO Friendly - Search engines(Google, Bing, etc.) can crawl real content.
+ - Better Social Media Previews - proper meta tags and content are visible.
+ - Improved User Experience - No "blank screen" while Angular is loading.
+
+*Advantages of SSR in Angular 20
+ - Faster initial page load
+ - Better SEO
+ - Works well on slow networks or low-end devices
+ - Essential for blogs, e-commerce and content heavy apps
+
+*Hydration in Angular?
+ Hydration in Angular means:
+ - After the server has already rendered the HTML(via SSR), Angular on the browser reuses that HTML into a live Angular app.
+ - It does not re-render the DOM, It just "hydrates" the static HTML into a live angular app.	
+
+*To create SSR angular app 
+ - ng new projectName
+ - asking du you want to create zoneless app - say n
+ - select css
+ - Do you you want to enable server side rendering - say y
+
+*to build anular application write command:
+ - ng build
+ - in CSR folder created as dist folder and inside folder namely broswer like projectfoldername/browser
+ - in SSR folder created as dist folder and inside folder namely browser and server
+ - to activate server go package.jcon and find it like serve:ssr:ssrangularapp
+ - to run write command on terminal like npm run serve:ssr:ssrangularapp
+
+*Service:
+ - Service is a mechanism used to share the functionality between the components.
+ - koi service kisi dusre service ko inject karna ho to use injectable hona jaruri hai 
+
+*Tree shaking service:
+ - It is unused service process called Tree shaking service
+
+*Routing in angular
+
+*Routing:
+ - To parse the URL, Angular uses the following conventions:
+ - / - slashes divides URL segments
+ - () - parentheses specify secondary routes
+ - : - a colon specifies a named router outlet
+ - ; - a semicolon specifies a matrix parameter
+ - ? - a question mark separates the query string parameters
+ - # - a hashtag specifies the fragment
+ - // - a double slash separates multiple secondary routes
+
+authentication - to use if user login karke aaya hai ya nahi?
+authorization- mean after login user ko konse konse page pr rights hai.(after authentication apko kis kis page par rights hai)
+
+*routing configuration syntax:
+export const routes: Routes = [
+    {path:'home', component: Dashboard, title:'Home Page'},
+];
+
+*wildcard route:
+ - wildcard route to intercept invalid URLs and handle them gracefully.
+ - if page not found then we use wildcard route
+ - to use wildcard like: {path:'**', component: Pagenotfound, title:'Page not found!'}
+
+*baseURL:
+ - not neccessory to  use base url on top routes of object. we can use any line in object.
+ - to set baseURL
+ export const routes: Routes = [
+    {path:'', redirectTo:'home' pathMatch:'full'}
+    {path:'home', component: Dashboard, title:'Home Page'},
+    {path:'aboutus', component: Aboutus, title:'About Page'},
+    {path:'**', component: Pagenotfound, title:'Page not found!'}
+ ]
+ - {path:'', component: Dashboard}, //other way but home not shong in url
+
+*Route Guards:
+ - There are 5 types of guards we use in Angular.
+ 1) CanActivate - This helps to decide whether the route can be activated or not 1 (route ko activate krne ke liye authentication check krte hai(check login or not).)
+ 2) CanActivateChild - This helps to decide whether child routes can be activated or not.
+ 3) CanDeactivate - This helps to decide whether the route can be deactivated or not. Generally, this is used to warm a user if they are navigating from the component. (kisi page ko leave kar karte time puchta hai are u sure to leave this page)
+ 4) Resolve - This performs route data retrieval before any activation of the route. (resolve mean kisi page pr jane se phle hm check krte hai data available hai ya nahi)
+ 5) CanLoad - Checks to see if the user can navigate to the module which is lazily loaded.
+
+ - In short:
+ 1) CanActivate guard (e.g. it checks route access).
+ 2) CanActivateChild guard (checks child route access).
+ 3) CanDeactivate guard (prompt for unsaved changes).
+ 4) Resolve guard (pre-fetching route data).
+ 5) CanLoad guard (check before loading feature module).
+
+ - to create guard command: ng g guard guard-name
+*Auth guard- authentication ke liye auth guard use karte hai taki without login user koi page access nahi kar paye.
+
+*Route Link Active:
+ - The RouterLinkActive is a directive for adding or removing classes from an HTML element that is bound to a RouterLink.
+ - Using this directive, we can toggle CSS classes for active Router links based on the current RouterState.
+
+*Diff between local staorage and session storage?
+
+*Session Manangement:
+ - 2 types of data storage which is session storage and local stogage.
+
+*Local storage:
+ - there is no expiry date for data storage.
+
+*What is Session storage?
+ - The session storage object is equal to the local storage object, except that it stores the data for only one session. The data is deleted when the user closes the
+   specific browser tab.
+
+*Cookies
+ - A cookie is a small piece of data sent from a website and stored on the user's machine by the user's web browsers while the user is browsing.
+ - Cookies are small packages of information that are typically stored in your browsers and websites tend to use cookies for multiple things.
+ How to install a cookie
+ npm install ngx-cookie-service --save
+ cookie methods are:
+ 1) Check - This method is used to check the cookie existing or not.
+ 2) Get - This method returns the value of given cookie name.
+ 3) GetAll - This method returns a value object with all the cookies
+ 4) Set - This method is used to set the cookies with a name.
+ 5) Delete - This method used to delete the cookie with the given name
+ 6) deleteAll - This method is used to delete all the cookies.
+
+*Forms
+ - Forms are the main building blocks of any application. When we use forms for login, registration, submission, help request, etc.
+ two types of forms in angular:
+ 1) Template-driven forms
+ 2) Model-driven forms(Reactive forms)
+
+*Reactive Forms:
+ Prerequisite: We need to import ReactiveFormsModule in our app.module.ts file.
+ Reactive Form Features
+ - More flexible, but needs a lot of practice
+ - Handles any complex scenarios
+ - More component code and less HTML markup
+ - Easier unit testing.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

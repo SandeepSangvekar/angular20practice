@@ -1,0 +1,49 @@
+1) Do you know what kind of guards were used for this?
+ - CanActivate: This guard decides if a  route can be activated. 
+   It's commonly used for implementing authentication and authorization checks before allowing access to a route.
+
+ - CanActivateChild: similar to CanActivate but specifically child routes.
+
+ - CanDeactivate: This guard decides if a route can be deactivated. 
+   Its often used for implementing confirmation dialogs or checks before leaving a route with unsaved changes.
+
+ - CanLoad: This guard prevents lazy-loaded modules from loading if certain conditions are not met. Is useful for optimizing intial application load times.
+
+ - Resolve: While not technically a guard, its often used in conjunction with guards. 
+   Resolve is a feature that prefetches data before a route is activated, ensuring that the route has all the necessary data before rendering.
+
+ - Authguard: This is custom guard that developers often create to implement application-specific authentication and authorization logic.
+
+2)*Authentication: 
+ - Proving who you are, often through a username and password or other credentials.
+
+3)*Authorization:
+ - Determining what you are allowed to do or access besed on your identity, roles, and permissions after you've been authenticated.
+
+4)What is SSR (server side rendering)?
+ - SSR in Angular means Server-Side Rendering, where the HTML is generated on the server and sent to the browser. 
+   It helps improve page load speed and SEO. Angular Universal is used for this.
+
+ how its works?
+  - When a user requests a page, the server compiles the Angular app and renders the page into HTML.
+  - The browser receives HTML content immediately, which improves performance and SEO.
+  - Once the page is loaded, Angular takes over (hydration) and makes the page interactive.
+
+
+5)localization for angular app?
+ - It's useful for making apps user-friendly for people in different regions.
+
+6)Why we use intercepter?
+ - We use an interceptor in Angular to intercept and modify HTTP requests or responses globally. 
+   It's mainly used for adding headers like auth tokens, handling errors, logging, or showing loaders during API calls.
+ - Examples:
+   Add JWT token to every request
+   Show a loading spinner during API calls
+   Handle 401 unauthorized errors in one place
+
+7) What is argument in function?
+ - when we call the function and adding value inside thats called argument.
+
+8)What is parameter?
+ - When we define or declare any function and passing any value thats called parameter.
+

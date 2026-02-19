@@ -1,0 +1,53 @@
+1) What is Angular, and what are its key features?
+Ans: 
+ Angular is TypeScript-based front-end framework developed by Google. Key features include:
+ - Component-based architecture
+ - Two-way data binding
+ - Dependency Injection
+ - Routing 
+ - RxJS for reactive programming
+ - Ahead-of-Time (AOT) compilation
+
+2) Explain the component lifecycle in Angular?
+Ans:
+ Angular components go through the following lifecycle hooks:
+ - ngOnInit() - called once after component initialization.
+ - ngOnChanges() - called when input-bound properties change.
+ - ngDoCheck() - custom change detection.
+ - ngAfterViewInit() - when the component's view is initialized.
+ - ngOnDestroy() - cleanup before destroying this component.
+
+3) What is dependency injection in Angular?
+Ans:
+ Dependency Injection is design pattern in which components get their dependencies from a central injector rather than creating them. Angular uses Dependency Injection to improve modularity and testing.
+
+4) How do you handle forms in Angular?
+Ans:
+ Angular provides:
+ - Template-driven forms (simple, uses directives)
+ - Reactive forms (more control, uses FormBuilder, FormGroup, FormControl)
+   I mostly use reactive forms for complex validaions and better unit testing.
+
+5) What is RxJS, and how do you use it Angular?
+Ans:
+ RxJS is a reactive programming library used with Angular form handling asynchronous events using Observables. I use RxJS for:
+ - HTTP requests (HttpClient)
+ - Debouncing user inputs
+ - Combining multiple observables using operators like mergeMap, switchMap, forkJoin
+
+6) What is lazy loading in Angular?
+Ans:
+ Lazy loading allows us to load feature modules only when they are needed. It improves performance by reducing the initial bundle size.
+
+7) How do you optimize performance in Angular apps?
+Ans:
+ Some ways I use:
+ - Lazy loading
+ - ChangeDetectionStrategy.OnPush
+ - TrackBy function in *ngFor
+ - Avoiding memory leaks with unsubscribe
+ - Using pure pipes and caching results
+
+8) How do you handle error handling in Angular
+
+
